@@ -1,0 +1,15 @@
+../Src/lcd.c:14:13:lcd_delay_us	2
+../Src/lcd.c:18:13:lcd_delay_ms	3
+../Src/lcd.c:32:6:I2C1_Init	1
+../Src/lcd.c:50:13:PCF8574_Write	4
+../Src/lcd.c:62:13:LCD_PulseEnable	1
+../Src/lcd.c:69:13:LCD_SendNibble	1
+../Src/lcd.c:74:13:LCD_SendByte	1
+../Src/lcd.c:79:13:LCD_Command	2
+../Src/lcd.c:84:6:LCD_SendChar	1
+../Src/lcd.c:91:6:LCD_Init	1
+../Src/lcd.c:104:6:LCD_Clear	1
+../Src/lcd.c:109:6:LCD_SetCursor	1
+../Src/lcd.c:114:6:LCD_Print	2
+../Src/lcd.c:118:6:LCD_BacklightOn	1
+../Src/lcd.c:123:6:LCD_BacklightOff	1

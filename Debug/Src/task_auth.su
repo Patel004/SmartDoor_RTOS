@@ -1,0 +1,2 @@
+../Src/task_auth.c:23:13:print_time	40	static
+../Src/task_auth.c:35:6:vTaskAuth	64	static

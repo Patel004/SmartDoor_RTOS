@@ -1,0 +1,8 @@
+../Src/task_cli.c:27:13:print_log_entry	8
+../Src/task_cli.c:81:13:cmd_dump_log	4
+../Src/task_cli.c:103:13:cmd_clear_log	1
+../Src/task_cli.c:108:13:cmd_status	1
+../Src/task_cli.c:132:13:cmd_set_time	7
+../Src/task_cli.c:151:13:cmd_help	1
+../Src/task_cli.c:163:13:process_command	11
+../Src/task_cli.c:196:6:vTaskCLI	8

@@ -1,0 +1,10 @@
+../Src/flash_log.c:25:13:flash_unlock	2
+../Src/flash_log.c:32:13:flash_lock	1
+../Src/flash_log.c:36:13:flash_wait_busy	2
+../Src/flash_log.c:43:13:flash_erase_page	1
+../Src/flash_log.c:62:13:flash_write_dword	1
+../Src/flash_log.c:81:6:FlashLog_Init	5
+../Src/flash_log.c:111:6:FlashLog_Write	3
+../Src/flash_log.c:144:10:FlashLog_Count	1
+../Src/flash_log.c:153:9:FlashLog_Read	2
+../Src/flash_log.c:164:6:FlashLog_Clear	1

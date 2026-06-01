@@ -1,0 +1,15 @@
+/Users/bhaumik/Desktop/STM32Projects/SmartDoor_RTOS/CMSIS/Include/core_cm4.h:1679:22:__NVIC_EnableIRQ	2
+/Users/bhaumik/Desktop/STM32Projects/SmartDoor_RTOS/CMSIS/Include/core_cm4.h:1809:22:__NVIC_SetPriority	2
+../Src/RFID.c:12:6:SPI_Init	1
+../Src/RFID.c:39:13:RFID_Cleanup	1
+../Src/RFID.c:49:9:SPI_TransmitReceive	3
+../Src/RFID.c:59:6:RFID_WriteRegister	1
+../Src/RFID.c:66:9:RFID_ReadRegister	1
+../Src/RFID.c:79:6:RFID_Reset	1
+../Src/RFID.c:89:13:RFID_IRQ_Init	1
+../Src/RFID.c:112:6:RFID_Init	2
+../Src/RFID.c:136:16:RFID_REQA	6
+../Src/RFID.c:164:16:RFID_Anticollision	9
+../Src/RFID.c:201:9:RFID_DetectCard	2
+../Src/RFID.c:216:6:EXTI0_IRQHandler	3
+../Src/RFID.c:233:6:delay_us	2

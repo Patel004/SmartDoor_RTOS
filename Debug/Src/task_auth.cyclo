@@ -1,0 +1,2 @@
+../Src/task_auth.c:23:13:print_time	1
+../Src/task_auth.c:35:6:vTaskAuth	10

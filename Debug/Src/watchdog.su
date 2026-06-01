@@ -1,0 +1,3 @@
+../Src/watchdog.c:11:6:IWDG_Init	4	static
+../Src/watchdog.c:19:6:IWDG_Pet	4	static
+../Src/watchdog.c:23:9:IWDG_WasResetCause	16	static

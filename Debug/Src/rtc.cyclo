@@ -1,0 +1,5 @@
+../Src/rtc.c:17:16:dec_to_bcd	1
+../Src/rtc.c:21:16:bcd_to_dec	1
+../Src/rtc.c:36:6:RTC_Init	3
+../Src/rtc.c:85:6:RTC_GetTime	1
+../Src/rtc.c:103:6:RTC_SetTime	2

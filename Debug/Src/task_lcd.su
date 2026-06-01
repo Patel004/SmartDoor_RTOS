@@ -1,0 +1,4 @@
+../Src/task_lcd.c:16:13:show_idle	8	static
+../Src/task_lcd.c:24:13:show_granted	8	static
+../Src/task_lcd.c:32:13:show_denied	8	static
+../Src/task_lcd.c:40:6:vTaskLCD	32	static

@@ -1,0 +1,10 @@
+../Src/flash_log.c:25:13:flash_unlock	4	static
+../Src/flash_log.c:32:13:flash_lock	4	static
+../Src/flash_log.c:36:13:flash_wait_busy	4	static
+../Src/flash_log.c:43:13:flash_erase_page	16	static
+../Src/flash_log.c:62:13:flash_write_dword	24	static
+../Src/flash_log.c:81:6:FlashLog_Init	24	static
+../Src/flash_log.c:111:6:FlashLog_Write	64	static
+../Src/flash_log.c:144:10:FlashLog_Count	4	static
+../Src/flash_log.c:153:9:FlashLog_Read	24	static
+../Src/flash_log.c:164:6:FlashLog_Clear	8	static
