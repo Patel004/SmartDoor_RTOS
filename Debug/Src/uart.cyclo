@@ -1,4 +1,0 @@
-../Src/uart.c:9:6:UART2_Init	1
-../Src/uart.c:28:6:UART2_SendChar	2
-../Src/uart.c:33:6:UART2_sendString	2
-../Src/uart.c:38:9:UART2_ReceiveChar	2

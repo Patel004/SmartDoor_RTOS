@@ -1,5 +1,0 @@
-../Src/keypad.c:17:13:col_drive_low	5
-../Src/keypad.c:24:13:col_drive_high	5
-../Src/keypad.c:31:13:all_cols_high	1
-../Src/keypad.c:57:6:Keypad_Init	1
-../Src/keypad.c:112:6:Keypad_GetKey	5

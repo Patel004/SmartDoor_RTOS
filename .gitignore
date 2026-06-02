@@ -1,0 +1,8 @@
+Debug/
+.DS_Store
+*.o
+*.d
+*.su
+*.elf
+*.map
+*.list

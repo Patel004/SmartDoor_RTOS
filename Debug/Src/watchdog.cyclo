@@ -1,3 +1,0 @@
-../Src/watchdog.c:11:6:IWDG_Init	2
-../Src/watchdog.c:19:6:IWDG_Pet	1
-../Src/watchdog.c:23:9:IWDG_WasResetCause	2

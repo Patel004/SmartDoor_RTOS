@@ -1,4 +1,0 @@
-../Src/task_lcd.c:16:13:show_idle	1
-../Src/task_lcd.c:24:13:show_granted	1
-../Src/task_lcd.c:32:13:show_denied	1
-../Src/task_lcd.c:40:6:vTaskLCD	6

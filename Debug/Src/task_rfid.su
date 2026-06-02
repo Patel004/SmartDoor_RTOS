@@ -1,4 +1,0 @@
-../Src/task_rfid.c:10:13:nibble_to_hex	16	static
-../Src/task_rfid.c:15:13:print_uid	24	static
-../Src/task_rfid.c:25:16:same_uid	24	static
-../Src/task_rfid.c:32:6:vTaskRFID	48	static
