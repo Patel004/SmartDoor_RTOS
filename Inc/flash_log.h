@@ -7,31 +7,41 @@
 #include <stdint.h>
 
 /* ─────────────────────────────────────────────────────────────────────
- *  STM32L476 Flash layout
- *  Total: 1 MB (2 banks × 512 KB, each bank has 256 pages of 2 KB)
- *  We use the LAST page of bank 1 for log storage.
- *  This keeps it far from our program code which starts at 0x08000000.
- *
- *  Last page of bank 1:
- *    Page 255 → 0x0807F800 to 0x0807FFFF (2 KB)
+ *  Flash page for log storage
+ *  Last page of bank 1: 0x0807F800 (2 KB)
  * ───────────────────────────────────────────────────────────────────── */
-#define LOG_PAGE_ADDR       0x0807F800UL   /* Start of log page          */
-#define LOG_PAGE_SIZE       2048U          /* 2 KB page                  */
-#define LOG_PAGE_NUMBER     255U           /* Page index in bank 1       */
+#define LOG_PAGE_ADDR       0x0807F800UL
+#define LOG_PAGE_SIZE       2048U
+#define LOG_PAGE_NUMBER     255U
 
 /* ─────────────────────────────────────────────────────────────────────
- *  Log entry structure
- *  Each entry is 16 bytes — fits neatly in flash double-word writes.
+ *  Log entry — exactly 16 bytes for clean 64-bit flash writes
+ *
+ *  Layout (verified with offsetof):
+ *  [0]     granted   (1 byte)
+ *  [1]     source    (1 byte)
+ *  [2-5]   uid       (4 bytes)
+ *  [6]     hour      (1 byte)
+ *  [7]     minute    (1 byte)
+ *  [8]     second    (1 byte)
+ *  [9]     day       (1 byte)
+ *  [10]    month     (1 byte)
+ *  [11]    year      (1 byte)
+ *  [12-15] reserved  (4 bytes) ← fixed from 3 to 4 to reach 16 bytes
  * ───────────────────────────────────────────────────────────────────── */
 typedef struct {
-    uint8_t     granted;        /* 1 = granted, 0 = denied              */
-    uint8_t     source;         /* 0 = RFID, 1 = PIN                    */
-    uint8_t     uid[4];         /* Card UID (zeros if PIN entry)        */
-    RTC_Time_t  timestamp;      /* When it happened                     */
-    uint8_t     reserved[3];    /* Pad to 16 bytes total                */
+    uint8_t    granted;        /* 1 = granted, 0 = denied    */
+    uint8_t    source;         /* 0 = RFID,    1 = PIN        */
+    uint8_t    uid[4];         /* Card UID (zeros for PIN)    */
+    uint8_t    hour;           /* Flattened RTC time fields   */
+    uint8_t    minute;         /* — avoids struct-in-struct   */
+    uint8_t    second;         /* alignment issues            */
+    uint8_t    day;
+    uint8_t    month;
+    uint8_t    year;
+    uint8_t    reserved[4];    /* Pad to exactly 16 bytes     */
 } LogEntry_t;
 
-/* Max entries that fit in one 2 KB page */
 #define LOG_MAX_ENTRIES     (LOG_PAGE_SIZE / sizeof(LogEntry_t))
 
 /* ─────────────────────────────────────────────────────────────────────
